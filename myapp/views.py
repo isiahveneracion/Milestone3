@@ -11,6 +11,7 @@ def home(request):
             first_name = form.cleaned_data["first_name"]
             return HttpResponse(f"Thank you , {first_name}")
 
+    #GET
     context = {}
     context["form"] = StudentForm
     return render(request, 'students_form.html', context)
